@@ -1,0 +1,19 @@
+<doctype html>
+<html>
+    <head>
+      <title>Test 1</title>
+      <script src="/socket.io/socket.io.js"></script>
+      <script>
+        var socket = io()
+
+        socket.emit('post', { message: 'hello' } )
+
+        socket.on('message', function (data) {
+          alert(data)
+        })
+      </script>
+    </head>
+    <body>
+      Hello There :D
+    </body>
+</html>
